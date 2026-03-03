@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: #1c1c1c;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #c9a227;
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(to right, #1c1c1c, #3a3a3a);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #c9a227;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #b8911c;
+}
+
+/* Sections */
+.section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.section h2 {
+    margin-bottom: 20px;
+    border-left: 5px solid #c9a227;
+    padding-left: 10px;
+}
+
+/* Cards */
+.card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 4px solid #c9a227;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Skills */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.skills-container span {
+    background: #1c1c1c;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1c1c1c;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
+// Smooth scrolling
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
